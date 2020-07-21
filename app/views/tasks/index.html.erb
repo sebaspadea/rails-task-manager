@@ -1,0 +1,11 @@
+<div class="container text-center mt-4">
+  <h1 class="titulo">My Tasks</h1>
+  <ul>
+  <% @tasks.each do |task|%>
+  <li class = "listasinpunto">
+  <%=task.completed == true ? "✔": "❌"%> <%= link_to "#{task[:title]}", task_path(task.id) %> <%= link_to "💥", delete_path(task), method: :delete %>
+  </li >
+  <% end %>
+  </ul>
+  <%= link_to "Add a new task", tasks_new_path, class: "btn btn-dark" %>
+</div>

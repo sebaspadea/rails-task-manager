@@ -1,0 +1,7 @@
+<div class="container text-center">
+  <h3 class="tarea text-center p-2"><%= @task.title %></h4>
+  <h5><%= @task.details %></h5>
+  <p><%= @completed %></p>
+  <%= link_to "GO BACK", tasks_path, class: "btn btn-dark" %>
+  <%= link_to "EDIT TASK", edit_path, class: "btn btn-dark" %>
+</div>
